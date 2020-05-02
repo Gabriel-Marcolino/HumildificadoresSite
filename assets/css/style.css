@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Mono', monospace!important;
+    font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     line-height: 1;
     margin: 0;
@@ -21,7 +21,6 @@ textarea:focus,
 input:focus,
 select:focus,
 button:focus {
-    box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
 }
@@ -30,6 +29,12 @@ input {
     font-size: 15px;
     color: #01B979;
     font-weight: bold;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .container {
@@ -186,6 +191,11 @@ input {
     text-align: center;
     background-color: white;
     box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.25);
+}
+
+.boxCadastro h2 {
+    color: #01B979;
+    font-weight: bold;
 }
 
 .formCadastro {
@@ -697,21 +707,75 @@ h3 {
     display: none;
 }
 
-.modal-header {
-    position: relative;
+#temperatura {
+    -webkit-appearance: none;
+    width: 640px;
+    height: 25px;
+    background: rgb(0, 255, 255);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(51, 204, 204, 1) 25%, rgba(51, 204, 51, 1) 50%, rgba(255, 127, 0, 1) 75%, rgba(255, 80, 80, 1) 100%);
+    outline: none;
+    opacity: 0.7;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all .2s;
+    cursor: pointer;
 }
 
-.modal-header .close {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    font-size: 35px;
-    margin: 0!important;
+#temperatura:hover {
+    opacity: 1;
 }
 
-/** 
- * Responsive design made by github.com/SamuelDenani
- */
+#temperatura::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 40px;
+    border-radius: 15px;
+    background-color: white;
+    border: gray 2px solid;
+    cursor: pointer;
+}
+
+#umidade {
+    -webkit-appearance: none;
+    width: 640px;
+    height: 25px;
+    background: rgb(0, 255, 255);
+    background: linear-gradient(90deg, rgba(0, 255, 255, 1) 0%, rgba(51, 204, 204, 1) 25%, rgba(51, 204, 51, 1) 50%, rgba(255, 127, 0, 1) 75%, rgba(255, 80, 80, 1) 100%);
+    outline: none;
+    opacity: 0.7;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#umidade:hover {
+    opacity: 1;
+}
+
+#umidade::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 40px;
+    border-radius: 15px;
+    background: white;
+    border: gray 2px solid;
+    cursor: pointer;
+}
+
+#selectTemp {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 47px;
+}
+
+#selectUmi {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 47px;
+}
 
 @media screen and (max-width: 768px) {
     .container {
@@ -911,4 +975,36 @@ h3 {
         content: '* Arraste para o lado para ver tudo';
         color: #c6c6c6;
     }
+}
+
+
+#temperatura {
+    padding: 5px 0;
+    width: 90%;
+}
+
+
+#temperatura::-webkit-slider-thumb {
+   
+}
+
+#umidade {
+    padding: 5px 0;
+    width: 90%;
+}
+
+
+
+#umidade::-webkit-slider-thumb {
+   
+}
+
+#selectTemp {
+    padding: 5px 0;
+    width: 20%; 
+}
+
+#selectUmi {
+    padding: 5px 0;
+    width: 20%;
 }
